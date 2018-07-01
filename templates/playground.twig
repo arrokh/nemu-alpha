@@ -1,0 +1,27 @@
+{% extends "layouts/base.html" %}
+
+{% block titlePage %}NEMU - Playground{% endblock %}
+
+{% block bodyPage %}
+    {{ include('directives/nav-header.twig', {isLogin: isLogin}) }}
+    <br>
+    {{ include('layouts/playground.php')}}
+{% endblock %}
+{% block scriptPage %}
+    <script type="text/javascript" src="../js/blockly_compressed.js"></script>
+    <script type="text/javascript" src="../js/blocks_compressed.js"></script>
+    <script type="text/javascript" src="../js/cake_compressed.js"></script>
+    <script type="text/javascript" src="../js/msg/js/en.js"></script>
+    <script type="text/javascript" src="../js/prettify.js"></script>
+    <script type="text/javascript" src="../js/code.js"></script>
+    <script>
+        $(".dropdown-trigger").dropdown();
+        $(document).ready(function () {
+            $('.sidenav').sidenav();
+        });
+        $('.collapsible').collapsible();
+        $(document).ready(function () {
+            $('.tabs').tabs();
+        });
+    </script>
+{% endblock %}

@@ -1,0 +1,51 @@
+{% extends "layouts/base.html" %}
+
+{% block titlePage %}NEMU - Register{% endblock %}
+
+{% block bodyPage %}
+    {{ include('directives/nav-header.twig') }}
+    <div class="container">
+        <br>
+        <div class="row">
+            <div class="col s12 m12 l8 push-l2" ng-show="isLoaded">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="card-title" align="center">
+                            <strong>Register</strong>
+                        </div>
+                        <form name="registerForm" role="registerForm" class="row" method="post">
+                            <div class="input-field col s12">
+                                <i class="material-icons prefix">email</i>
+                                <input autofocus="autofocus" name="email" type="email" class="validate" minlength="5" maxlength="50" required="required">
+                                <label for="email">Email</label>
+                            </div>
+                            <div class="input-field col s12">
+                                <i class="material-icons prefix">vpn_key</i>
+                                <input name="password" type="password" class="validate" minlength="5" maxlength="20" required="required">
+                                <label for="password">Password</label>
+                            </div>
+                            <div class="input-field col s12">
+                                <input class="waves-effect waves-light btn right" type="submit" value="Register">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+{% block scriptPage %}
+    <script>
+        $(".dropdown-trigger").dropdown();
+        $(document).ready(function () {
+            $('.sidenav').sidenav();
+        });
+        $('.collapsible').collapsible();
+
+        {% if emailExists %}
+            var toastHTML = '<span>Your email already used try to Login?</span>';
+            M.toast({html: toastHTML});
+        {% endif %}
+    </script>
+{% endblock %}
