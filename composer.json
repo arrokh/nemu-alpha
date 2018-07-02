@@ -15,18 +15,6 @@
         "monolog/monolog": "^1.17",
         "slim/twig-view": "^2.4",
         "php-activerecord/php-activerecord": "dev-master"
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "Tests\\": "tests/"
-        }
-    },
-    "config": {
-        "process-timeout": 0
-    },
-    "scripts": {
-        "start": "php -S localhost:8080 -t public",
-        "test": "phpunit"
     }
 
 }
