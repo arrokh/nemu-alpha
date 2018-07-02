@@ -10,7 +10,7 @@ $container['renderer'] = function ($c) {
 };
 
 $container['view'] = function ($container) {
-    $view = new \Slim\Views\Twig(__DIR__.'\..\templates', [
+    $view = new \Slim\Views\Twig(__DIR__.'/../templates', [
         'cache' => false
     ]);
 
