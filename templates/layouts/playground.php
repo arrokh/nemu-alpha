@@ -4,6 +4,7 @@
     <div class="col s7">
         <div id="blocklyDiv"></div>
     </div>
+
     <xml id="toolbox">
         <category name="Variables">
             <category name="Variable">
@@ -24,10 +25,29 @@
                 <block type="variables_pointer_*"></block>
             </category>
             <category name="Array">
-                <block type="variables_array_declare"></block>
-                <block type="variables_array_get"></block>
-                <block type="variables_array_set"></block>
+                <block type="variables_array_declare">
+                    <value name="LENGTH_1">
+                        <block type="math_number">
+                            <field name="NUM">1</field>
+                        </block>
+                    </value>
+                </block>
+                <block type="variables_array_get">
+                    <value name="LENGTH_1">
+                        <block type="math_number">
+                            <field name="NUM">1</field>
+                        </block>
+                    </value>
+                </block>
+                <block type="variables_array_set">
+                    <value name="LENGTH_1">
+                        <block type="math_number">
+                            <field name="NUM">1</field>
+                        </block>
+                    </value>
+                </block>
             </category>
+        </category>
         </category>
         <category name="Arithmetics">
             <block type="math_number"></block>
@@ -61,71 +81,26 @@
             <block type="structure_define"></block>
             <block type="structure_declare"></block>
         </category>
-        <category name="Library">
-            <category name="Stdio">
-                <block type="library_stdio_printf"></block>
-                <block type="library_stdio_text"></block>
-                <block type='library_stdio_newLine'></block>
-                <block type="library_stdio_scanf"></block>
-            </category>
-            <category name="Stdlib">
-                <block type="library_stdlib_convert"></block>
-                <block type="library_stdlib_rand">
-                    <value name="VAR">
-                        <block type="library_stdlib_rand_scope">
-                            <value name="A">
-                                <block type="library_stdlib_number_forRandScope1"></block>
-                            </value>
-                            <value name="B">
-                                <block type="library_stdlib_number_forRandScope100"></block>
-                            </value>
-                        </block>
-                    </value>
-                </block>
-                <block type="library_stdlib_malloc">
-                    <value name="VAR">
-                        <block type="library_stdlib_arithmetic_forMalloc">
-                            <value name="A">
-                                <block type="library_stdlib_sizeof_forMalloc"></block>
-                            </value>
-                            <value name="B">
-                                <block type="library_stdlib_number_forMalloc"></block>
-                            </value>
-                        </block>
-                    </value>
-                </block>
-                <block type="library_stdlib_arithmetic_forMalloc">
-                    <value name="A">
-                        <block type="library_stdlib_sizeof_forMalloc"></block>
-                    </value>
-                    <value name="B">
-                        <block type="library_stdlib_number_forMalloc"></block>
-                    </value>
-                </block>
-                <block type="library_stdlib_free"></block>
-                <block type="library_stdlib_exit"></block>
-            </category>
-            <category name="String">
-                <block type="library_string_strlen"></block>
-                <block type="library_string_strcat"></block>
-                <block type="library_string_strcpy"></block>
-                <block type="library_string_strcmp"></block>
-            </category>
-            <category name="Math">
-                <block type="library_math_abs"></block>
-                <block type="library_math_trig"></block>
-                <block type="library_math_logs"></block>
-                <block type="library_math_pow"></block>
-                <block type="library_math_exp"></block>
-                <block type="library_math_sqrt"></block>
-                <block type="library_math_round"></block>
-                <block type="library_math_numcheck"></block>
-                <block type="library_math_numcompare"></block>
-            </category>
-            <category name="Time">
-                <block type="library_time_current"></block>
-                <block type="library_time_requiredTime"></block>
-            </category>
+        <category name="Print">
+            <block type="library_stdio_printf">
+                <value name="VAR0">
+                    <block type="library_stdio_text"></block>
+                </value>
+            </block>
+            <block type="library_stdio_scanf"></block>
+            <block type="library_stdio_text"></block>
+            <block type='library_stdio_newLine'></block>
+        </category>
+        <category name="Math">
+            <block type="library_math_abs"></block>
+            <block type="library_math_trig"></block>
+            <block type="library_math_logs"></block>
+            <block type="library_math_pow"></block>
+            <block type="library_math_exp"></block>
+            <block type="library_math_sqrt"></block>
+            <block type="library_math_round"></block>
+            <block type="library_math_numcheck"></block>
+            <block type="library_math_numcompare"></block>
         </category>
         <category name="Others">
             <block type='comment'>
