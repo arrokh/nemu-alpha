@@ -24,7 +24,6 @@
 
 <ul id="menu-dropdown" class="dropdown-content">
     {% if not isLogin %}
-    <li class="divider"></li>
     <li><a href="{{path_for('login')}}">Login</a></li>
     <li><a href="{{path_for('register')}}">Register</a></li>
     {% else %}

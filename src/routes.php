@@ -4,7 +4,6 @@ use Slim\Http\Request;
 use Slim\Http\Response;
 
 // Routes
-/*
 $app->get('/', function ($req, $res, $args) {
     // Sample log message
     $this->logger->info("Slim-Skeleton '/' route");
@@ -88,12 +87,8 @@ $app->get('/logout', function ($req, $res, $args) {
     }
     return $res->withHeader('Location', $this->router->pathFor('home'));
 })->setName('logout');
-*/
 
-$app->get('/', function ($req, $res, $args) {
-    print_r($_SERVER);
-
-
+$app->get('/playground', function ($req, $res, $args) {
     $data = array();
     
     if (isset($_SESSION['uac'])) {
