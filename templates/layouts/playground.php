@@ -1,10 +1,14 @@
 <link rel="stylesheet" type="text/css" href="../css/prettify.css">
 <link rel="stylesheet" type="text/css" href="../css/style.css">
-<div id="main-wrapper" class="row">
-    <div class="col s7">
+<style type="text/css">
+    .tabs .indicator {
+        background-color: #01579b;
+    }
+</style>
+<div class="row">
+    <div class="col m7">
         <div id="blocklyDiv"></div>
     </div>
-
     <xml id="toolbox">
         <category name="Variables">
             <category name="Variable">
@@ -114,20 +118,12 @@
             <block type="define_get"></block>
         </category>
     </xml>
-    <div class="col s5">
-        <div class="row">
-            <div class="col s6">
-                <a class="waves-effect waves-light btn" style="width:100%;" href="#downloadToServer" onclick="saveToServer()" aria-controls="downloadToServer">Save to Server</a>
-            </div>
-            <div class="col s6">
-                <a class="waves-effect waves-light btn" style="width:100%;" href="javascript:void(0)" id="dlbtn" onclick="saveToClient('main.cpp', 'text/plain')">Save to Client</a>
-            </div>
-        </div>
-        <div class="row">
+    <div class="col m5">
+        <div class="row" style="margin-bottom: 0;">
             <div class="col s12">
                 <ul class="tabs">
-                    <li class="tab col s3"><a class="active" href="#tabCode">Code</a></li>
-                    <li class="tab col s3"><a href="#tabTerminal">Terminal</a></li>
+                    <li class="tab col s3"><a class="active blue-text" href="#tabCode">Code</a></li>
+                    <li class="tab col s3"><a class="blue-text" href="#tabTerminal">Terminal</a></li>
                 </ul>
             </div>
             <div id="tabCode" class="col s12">
@@ -138,6 +134,14 @@
             </div>
             <div id="tabTerminal" class="col s12">
                 <embed src="../webconsole/webconsole.php" frameborder="0" width="100%" height="400px"></embed>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s6">
+                <a class="waves-effect waves-light btn" style="width:100%;" href="#downloadToServer" onclick="saveToServer()" aria-controls="downloadToServer">Save to Server</a>
+            </div>
+            <div class="col s6">
+                <a class="waves-effect waves-light btn" style="width:100%;" href="javascript:void(0)" id="dlbtn" onclick="saveToClient('main.cpp', 'text/plain')">Save to Client</a>
             </div>
         </div>
     </div>

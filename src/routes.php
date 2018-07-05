@@ -94,7 +94,7 @@ $app->get('/playground', function ($req, $res, $args) {
     if (isset($_SESSION['uac'])) {
         $data['isLogin'] = true;
     } else {
-        $data['isLogin'] = false;
+        return $res->withHeader('Location', $this->router->pathFor('login'));
     }
 
     return $this->view->render($res, 'playground.twig', $data);

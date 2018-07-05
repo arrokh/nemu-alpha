@@ -4,6 +4,12 @@
 
 {% block bodyPage %}
     {{ include('directives/nav-header.twig') }}
+
+    <style type="text/css">
+        #inputSubmit {
+            color: white;
+        }
+    </style>
     
     <div class="container">
         <br>
@@ -11,7 +17,7 @@
             <div class="col s12 m12 l8 push-l2" ng-show="isLoaded">
                 <div class="card">
                     <div class="card-content">
-                        <div class="card-title" align="center">
+                        <div class="card-title blue-text" align="center">
                             <strong>Login</strong>
                         </div>
                         <form name="loginForm" role="loginForm" class="row" method="post">
@@ -26,7 +32,7 @@
                                 <label for="password" >Password</label>
                             </div>
                             <div class="input-field col s12">
-                                 <input class="waves-effect waves-light btn right" type="submit" value="Login">
+                                 <input id="inputSubmit" class="waves-effect waves-light btn right light-blue darken-3" type="submit" value="Login">
                             </div>
                             {# 
                             <div class="col s12">

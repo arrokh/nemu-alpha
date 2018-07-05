@@ -4,6 +4,64 @@
 
 {% block bodyPage %}
     {{ include('directives/nav-header.twig', {isLogin: isLogin}) }}
+
+    <div>
+		<div class="section no-pad-bot" id="index-banner">
+			<div class="container">
+			  <br><br>
+			  <h1 class="header center blue-text">NEMU</h1>
+			  <div class="row center">
+			    <h5 class="header col s12 light">Visual Programming Environment as Supporting Learning Process of Basic Programming Subject at Vocational High School</h5>
+			  </div>
+			  <div class="row center">
+			    <a href="{{path_for('playground')}}" id="download-button" class="btn-large waves-effect waves-light light-blue darken-3">Try It!</a>
+			  </div>
+			  <br><br>
+			</div>
+		</div>
+		<div class="container">
+			<hr>		
+			<div class="section">
+			  <!--   Icon Section   -->
+			  <div class="row">
+			    <div class="col s12 m4">
+			      <div class="icon-block">
+			        <h2 class="center blue-text"><i class="large material-icons">school</i></h2>
+			        <h5 class="center">Speeds up development</h5>
+
+			        <p class="light">
+						NEMU is a computer-assisted learning medium that provides a means for educators to create online courses that are integrated with the Visual Programming Environment. 
+			        </p>
+			      </div>
+			    </div>
+
+			    <div class="col s12 m4">
+			      <div class="icon-block">
+			        <h2 class="center blue-text"><i class="large material-icons">whatshot</i></h2>
+			        <h5 class="center">User Experience Focused</h5>
+
+			        <p class="light">
+						Understanding of Basic Programming without having to be preoccupied with the operating procedures, instructions, and grammar rules that exist in the programming language with support by Visual Programming Language. 
+			        </p>
+			      </div>
+			    </div>
+
+			    <div class="col s12 m4">
+			      <div class="icon-block">
+			        <h2 class="center blue-text"><i class="large material-icons">developer_mode</i></h2>
+			        <h5 class="center">Easy to work with</h5>
+
+			        <p class="light">
+						Students will be presented graphical blocks of representations of programming code concepts such as variables, logical expressions, looping, branching and so on, using the interactive Blockly library from Google that can be compiled online. 
+			        </p>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+		</div>
+    </div>
+	
+
 {% endblock %}
 {% block scriptPage %}
     <script>

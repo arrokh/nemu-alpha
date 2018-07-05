@@ -1,19 +1,26 @@
 <ul class="sidenav" id="list-menu-mob">
-    <li><a href="{{path_for('home')}}">Home</a></li>
     <li>
         <ul class="collapsible collapsible-accordion">
             <li>
-                <a class="collapsible-header">
+                <a href="{{path_for('home')}}" class="collapsible-header blue-text">
+                    <u>Home</u>
+                </a>
+            </li>
+        </ul>
+    <li>
+        <ul class="collapsible collapsible-accordion">
+            <li>
+                <a class="collapsible-header blue-text">
                     <u>Menu</u>
                 </a>
                 <div class="collapsible-body">
                     <ul>
                         {% if not isLogin %}
-                        <li><a href="{{path_for('login')}}">Login</a></li>
-                        <li><a href="{{path_for('register')}}">Register</a></li>
+                        <li><a class="blue-text" href="{{path_for('login')}}">Login</a></li>
+                        <li><a class="blue-text" href="{{path_for('register')}}">Register</a></li>
                         {% else %}
-                        <li><a href="{{path_for('playground')}}">Playground</a></li>
-                        <li><a href="{{path_for('logout')}}">Logout</a></li>
+                        <li><a class="blue-text" href="{{path_for('playground')}}">Playground</a></li>
+                        <li><a class="blue-text" href="{{path_for('logout')}}">Logout</a></li>
                         {% endif %}
                     </ul>
                 </div>
@@ -24,16 +31,15 @@
 
 <ul id="menu-dropdown" class="dropdown-content">
     {% if not isLogin %}
-    <li><a href="{{path_for('login')}}">Login</a></li>
-    <li><a href="{{path_for('register')}}">Register</a></li>
+    <li><a class="blue-text" href="{{path_for('login')}}">Login</a></li>
+    <li><a class="blue-text" href="{{path_for('register')}}">Register</a></li>
     {% else %}
-    <li><a href="{{path_for('playground')}}">Playground</a></li>
-    <li><a href="{{path_for('logout')}}">Logout</a></li>
+    <li><a class="blue-text" href="{{path_for('playground')}}">Playground</a></li>
+    <li><a class="blue-text" href="{{path_for('logout')}}">Logout</a></li>
     {% endif %}
-    
 </ul>
 
-<nav>
+<nav class="light-blue darken-3">
     <div class="nav-wrapper container">
         <a href="{{path_for('home')}}" class="brand-logo">NEMU</a>
         <a href="#" data-target="list-menu-mob" class="sidenav-trigger"><i class="material-icons">menu</i></a>
