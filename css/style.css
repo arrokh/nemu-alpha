@@ -104,3 +104,14 @@
 #footer {
   border-top: 1px solid #e5e5e5;
 }
+
+
+.toast-red {
+  background-color: #c62828;
+  border-radius: 24px;
+}
+
+.toast-blue {
+  background-color: #1565c0;
+  border-radius: 24px;
+}

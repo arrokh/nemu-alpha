@@ -138,10 +138,26 @@
         </div>
         <div class="row">
             <div class="col s6">
-                <a class="waves-effect waves-light btn" style="width:100%;" href="#downloadToServer" onclick="saveToServer()" aria-controls="downloadToServer">Save to Server</a>
+                <a class="waves-effect waves-light btn" style="width:100%;" onclick="saveToServerPrompt()" aria-controls="downloadToServer">Save to Server</a>
             </div>
             <div class="col s6">
                 <a class="waves-effect waves-light btn" style="width:100%;" href="javascript:void(0)" id="dlbtn" onclick="saveToClient('main.cpp', 'text/plain')">Save to Client</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="saveToServerModal" class="modal bottom-sheet">
+    <div class="modal-content" align="center">
+        <div class="row">
+            <h6>Are you sure to update your code on the server?</h6>
+        </div>
+        <div class="row">
+            <div class="col m6">
+                <a href="#downloadToServer" onclick="saveToServer()" class="waves-effect waves-green btn right">Yes</a>
+            </div>
+            <div class="col m6">
+                <a href="#!" class="modal-close waves-effect waves-green btn-flat left">No</a>
             </div>
         </div>
     </div>
