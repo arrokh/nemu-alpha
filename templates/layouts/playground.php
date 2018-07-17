@@ -73,7 +73,7 @@
             <block type="logic_negate"></block>
             <block type="logic_boolean"></block>
             <block type="logic_null"></block>
-            <block type="logic_ternary"></block>
+            <!-- <block type="logic_ternary"></block> -->
         </category>
         <category name="Functions" custom="PROCEDURE">
             <block type="procedures_defnoreturn"></block>
