@@ -1,5 +1,5 @@
-<link rel="stylesheet" type="text/css" href="../css/prettify.css">
-<link rel="stylesheet" type="text/css" href="../css/style.css">
+<link rel="stylesheet" type="text/css" href="../src/css/prettify.css">
+<link rel="stylesheet" type="text/css" href="../src/css/style.css">
 <style type="text/css">
     .tabs .indicator {
         background-color: #01579b;
@@ -133,7 +133,7 @@
                 </div>
             </div>
             <div id="tabTerminal" class="col s12">
-                <embed src="../webconsole/webconsole.php" frameborder="0" width="100%" height="400px"></embed>
+                <embed src="../src/webconsole/webconsole.php" frameborder="0" width="100%" height="400px"></embed>
             </div>
         </div>
         <div class="row">

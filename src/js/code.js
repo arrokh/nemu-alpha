@@ -39,18 +39,18 @@ function saveToServerPrompt() {
 }
 
 function saveToServer() {
-    M.toast({html: 'Uploading', classes: 'rounded'});
+    M.toast({ html: 'Uploading', classes: 'rounded' });
     // console.log(M.toast({html: 'Uploading', classes: 'rounded'}));
     $.ajax({
         type: "POST",
-        url: "../rw-access/",
+        url: "../src/webconsole/rw-access/",
         data: Blockly.cake.workspaceToCode(),
         contentType: 'text/plain'
     }).done(function(data) {
-        M.toast({html: 'Successfully updated', classes: 'toast-blue'});
-    }).fail(function (data) {
-        M.toast({html: 'Failed to update', classes: 'toast-red'});
-    }).always(function () {
+        M.toast({ html: 'Successfully updated', classes: 'toast-blue' });
+    }).fail(function(data) {
+        M.toast({ html: 'Failed to update', classes: 'toast-red' });
+    }).always(function() {
         M.Modal.getInstance($('#saveToServerModal')).close();
     });
 }

@@ -42,7 +42,7 @@ ActiveRecord\Config::initialize(function ($cfg) {
 
     $pathDatabase = 'mysql://root:m0krajbal@localhost/nemu';
 
-    $cfg->set_model_directory('../models');
+    $cfg->set_model_directory('../../api/models');
     $cfg->set_connections(array(
         'development' => $pathDatabase
         ));

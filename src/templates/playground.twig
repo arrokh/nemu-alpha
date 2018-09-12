@@ -8,11 +8,11 @@
 	{{ include('layouts/playground.php')}}
 {% endblock %}
 {% block scriptPage %}
-	<script type="text/javascript" src="../js/blockly_compressed.js"></script>
-	<script type="text/javascript" src="../js/blocks_compressed.js"></script>
-	<script type="text/javascript" src="../js/cake_compressed.js"></script>
-	<script type="text/javascript" src="../js/msg/js/en.js"></script>
-	<script type="text/javascript" src="../js/prettify.js"></script>
+	<script type="text/javascript" src="../src/js/blockly_compressed.js"></script>
+	<script type="text/javascript" src="../src/js/blocks_compressed.js"></script>
+	<script type="text/javascript" src="../src/js/cake_compressed.js"></script>
+	<script type="text/javascript" src="../src/js/msg/js/en.js"></script>
+	<script type="text/javascript" src="../src/js/prettify.js"></script>
 	<script>
 		$(document).ready(function () {
 			$(".dropdown-trigger").dropdown();
@@ -24,5 +24,5 @@
 			});
 		});
 	</script>
-	<script type="text/javascript" src="../js/code.js"></script>
+	<script type="text/javascript" src="../src/js/code.js"></script>
 {% endblock %}
